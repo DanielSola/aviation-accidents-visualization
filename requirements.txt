@@ -5,3 +5,4 @@ pandas
 streamlit
 squarify
 mpld3
+plotly-express
