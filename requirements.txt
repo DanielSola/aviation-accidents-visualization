@@ -1,0 +1,7 @@
+Flask
+requests
+numpy
+pandas
+streamlit
+squarify
+mpld3
