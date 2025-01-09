@@ -8,16 +8,23 @@ def accidents_by_year(accidents_data):
 
     data = get_accidents_by_year(accidents_data)
 
-    st.write("Accidents by Year (Stacked by Fatal/Non-Fatal):")
 
     chart = alt.Chart(data).mark_area().encode(
-            x=alt.X('Year:O', scale=alt.Scale(domain=list(range(1982, 2023)))),
+            x=alt.X('Year:O', scale=alt.Scale(domain=list(range(1982, 2023))), axis=alt.Axis(labelAngle=-45)),
             y=alt.Y('Count:Q'),
-            color=alt.Color('Severity:N', sort=['Fatal', 'Non-Fatal']),
-            order=alt.Order('Severity', sort='ascending')
+            color=alt.Color('Severity:N', sort=['Non-Fatal', 'Fatal']),
+            order=alt.Order('Severity', sort='descending')
         ).properties(
             width=1000,
-            height=400
+            height=400,
+            title="Accidents by Year (Fatal/Non-Fatal)"
         )
         
     st.altair_chart(chart)
+
+    # Add a text explanation
+    st.markdown("""
+    The graph shows a decline in the number of aviation accidents from about 3500 yearly in 1982 to about 1500 in 2022. 
+    This trend indicates improvements in aviation safety over the years, likely due to advancements in technology, 
+    better training, and stricter regulations.
+    """)

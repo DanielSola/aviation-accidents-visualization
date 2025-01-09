@@ -33,6 +33,12 @@ def accidents_by_purpose_of_flight(data):
     # Display the bar chart in Streamlit
     st.plotly_chart(fig)
 
+    st.markdown(
+        """
+        This chart shows that the majority of accidents occur during personal flights, significantly outnumbering other flight purposes. Instructional, business, and crop-dusting flights follow, while specialized activities like firefighting and glider towing have relatively few accidents.
+        """
+    )
+
     flight_purpose_selector(data)
     
 

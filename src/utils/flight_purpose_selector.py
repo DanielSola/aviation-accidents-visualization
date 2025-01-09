@@ -87,3 +87,10 @@ def flight_purpose_selector(data):
 
     # Display the bar chart in Streamlit
     st.plotly_chart(fig)
+
+
+    st.markdown(
+        """
+        The selector above enables viewing detailed data for each flight purpose. By examining the data, we can analyze the annual number of accidents and identify the aircraft most frequently involved. Additionally, the stacked horizontal bar provides a clear view of the relative percentages of fatalities, injuries, and uninjured persons for each flight purpose.
+        """
+    )

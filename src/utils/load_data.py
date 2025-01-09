@@ -190,5 +190,7 @@ def load_data():
         lambda row: normalize_make_model(row["Make"], row["Model"]), axis=1, result_type="expand"
     )
 
+    data.loc[data["Air.carrier"].str.contains("Malaysian", case=False, na=False), "Air.carrier"] = "Malaysia Airlines"
+
     return data
     

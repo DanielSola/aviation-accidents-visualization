@@ -6,3 +6,4 @@ streamlit
 squarify
 mpld3
 plotly
+circlify

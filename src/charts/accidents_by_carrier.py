@@ -59,4 +59,10 @@ def accidents_by_carrier(data):
         title='Top 20 Companies by Total Number of Accidents'
     )
 
+
     st.altair_chart(row_chart)
+
+    st.markdown("""
+    The chart shows the top 20 air carriers by the number of accidents. The data has been normalized to group similar carrier names together. 
+    This visualization helps identify which carriers have had the most accidents, providing insights into potential areas for safety improvements.
+    """)
